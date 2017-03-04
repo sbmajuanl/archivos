@@ -7,11 +7,15 @@ describe('arreglos', function(){
   it('should return the sum of 2 array', function(){
     assert.deepEqual(calcular.arreglos ([2,3,4],[2,4,5]),[4,7,9])
   })
-
+  it('should return the sum of 2 array 1x1 y 3x1', function(){
+    assert.deepEqual(calcular.arreglos ([2],[2,4,5]),[4])
+  })
+  it('should return the sum of 2 array 2x1 y 3x1', function(){
+    assert.deepEqual(calcular.arreglos ([2,3],[2,4,5]),[4,7])
+  })
   it('should raise an error if the array param is missing', function(){
     assert.equal(calcular.arreglos(undefined,[2,4,5]),"Error")
   })
-
   it('should raise an error if the array param is missing', function(){
     assert.equal(calcular.arreglos(undefined,undefined),"Error")
   })
